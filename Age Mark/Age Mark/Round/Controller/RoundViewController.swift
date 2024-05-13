@@ -177,7 +177,7 @@ class RoundViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     }
     
     // MARK: ScrollView
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         let currentIndex = segmentedControl.selectedSegmentIndex
         segmentedControl.selectedSegmentIndex = Int(scrollView.contentOffset.x / DefaultData.shared().screenWidth)
         if currentIndex != segmentedControl.selectedSegmentIndex {
